@@ -140,7 +140,7 @@ footer:
     - label: "Facebook"
       icon: "fab fa-fw fa-facebook-square"
       # url:
-    - label: "GitHub"sc
+    - label: "GitHub"
       icon: "fab fa-fw fa-github"
       # url:
     - label: "GitLab"
