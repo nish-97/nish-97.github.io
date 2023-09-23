@@ -4,14 +4,15 @@ layout: archive
 
 {{ content }}
 
-<h3 class="archive__subtitle">{{ site.data.ui-text[site.locale].recent_posts | default: "About me" }}</h3>
+<h3 class="archive__subtitle">About Me</h3>
+<br>
 
 {% if paginator %}
   {% assign posts = paginator.posts %}
 {% else %}
   {% assign posts = site.posts %}
 {% endif %}
- <p>
+ <p style="font-size : 11 px">
 
   Hello, I am a 1st year MS student at IIT Bombay working in Systems domain with the supervision of Prof Biswabandan Panda
   working in CASPER group. I come from Patna, Bihar and completed my Undergraduate in Information Technology from Techno India, Kolkata.
