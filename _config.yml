@@ -16,9 +16,10 @@ minimal_mistakes_skin    : "contrast"
   #"default", "air", "aqua", #"dark", "dirt", "neon", "mint", "plum", "sunrise"
 
 # Site Settings
-X : **HelloWorld**
+
 locale                   : "en-US"
-title                    : X
+title                    : "helloworld"
+   style : "bold"
 title_separator          : "-"
 subtitle                 : # site tagline that appears below site title in masthead
 name                     : "Nishkarsh"
@@ -140,7 +141,7 @@ footer:
     - label: "Facebook"
       icon: "fab fa-fw fa-facebook-square"
       # url:
-    - label: "GitHub"
+    - label: "GitHub"sc
       icon: "fab fa-fw fa-github"
       # url:
     - label: "GitLab"
