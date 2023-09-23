@@ -16,7 +16,7 @@ minimal_mistakes_skin    : "contrast"
   #"default", "air", "aqua", #"dark", "dirt", "neon", "mint", "plum", "sunrise"
 
 # Site Settings
-X = **HelloWorld**
+X : **HelloWorld**
 locale                   : "en-US"
 title                    : X
 title_separator          : "-"
