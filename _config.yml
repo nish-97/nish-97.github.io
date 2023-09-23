@@ -120,14 +120,14 @@ author:
     - #label: "Twitter"
       #icon: "fab fa-fw fa-twitter-square"
       # url: "https://twitter.com/"
-    - label: "Linkedin"
-      icon: "fab fa-fw fa-linkedin-circle"
+    - label: "LinkedIn"
+      icon: "fab fa-fw fa-linkedin"
       url: "https://www.linkedin.com/in/nishkarsh-gautam-9b318018a/"
     - label: "GitHub"
-      icon: "fab fa-fw fa-github-circle"
+      icon: "fab fa-fw fa-github"
       url: "https://github.com/nish-97"
     - label: "Google Scholar"
-      icon: "fab fa-fw fa-googlescholar-circle"
+      icon: "fas fa-fw fa-graduation-cap"
       url: "https://scholar.google.com/citations?hl=en&view_op=list_works&gmla=AP6z3ObklinAAa8x2veYcQAMkM9qN4Xy_y9ENXj_C0vVMZAx7V-PxsJsEJKiotNAYNmZdFtQkxE7IhD2aguhTQ&user=PiLwuuEAAAAJ"
 
 # Site Footer
