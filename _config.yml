@@ -17,11 +17,11 @@ minimal_mistakes_skin    : "contrast"
 
 # Site Settings
 locale                   : "en-US"
-title                    : "Awesome Site"
+title                    : "helloworld**.**"
 title_separator          : "-"
 subtitle                 : # site tagline that appears below site title in masthead
 name                     : "Nishkarsh"
-description              : "An amazing website."
+description              : "*helloworld.*"
 url                      : "https://nish-97.github.io"
 baseurl                  : # the subpath of your site, e.g. "/blog"
 repository               : # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
@@ -107,7 +107,7 @@ analytics:
 author:
   name             : "Nishkarsh Gautam"
   avatar           : "/assets/nish.jpg"
-  bio              : "MS Student in Computer Science @ IIT Bombay"
+  bio              : "MS Student in     Computer Science @ IIT Bombay"
   location         : "Bombay, India"
   #email            : "nishkarsh[at]cse[dot]iitb[dot]ac[dot]in"
   links:
