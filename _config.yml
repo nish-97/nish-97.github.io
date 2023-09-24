@@ -12,13 +12,13 @@
 
 # theme                  : "minimal-mistakes-jekyll"
 remote_theme             : "mmistakes/minimal-mistakes@4.24.0"
-minimal_mistakes_skin    : "sunrise"
+minimal_mistakes_skin    : "dark"
   #"default", "air", "aqua", #"dark", "dirt", "neon", "mint", "plum", "sunrise"
 
 # Site Settings
 
 locale                   : "en-US"
-title                    : "helloworld."
+title                    : "Helloworld."
 title_separator          : "-"
 subtitle                 : # site tagline that appears below site title in masthead
 name                     : "Nishkarsh"
@@ -128,7 +128,7 @@ author:
       icon: "fab fa-fw fa-github"
       url: "https://github.com/nish-97"
     - label: "Google Scholar"
-      icon: "fas fa-fw fa-graduation-cap"
+      icon: "fab fa-google"
       url: "https://scholar.google.com/citations?hl=en&view_op=list_works&gmla=AP6z3ObklinAAa8x2veYcQAMkM9qN4Xy_y9ENXj_C0vVMZAx7V-PxsJsEJKiotNAYNmZdFtQkxE7IhD2aguhTQ&user=PiLwuuEAAAAJ"
 
 # Site Footer
