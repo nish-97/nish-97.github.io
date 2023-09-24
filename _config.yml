@@ -18,11 +18,11 @@ minimal_mistakes_skin    : "sunrise"
 # Site Settings
 
 locale                   : "en-US"
-title                    : "**helloworld.**"
+title                    : "helloworld."
 title_separator          : "-"
 subtitle                 : # site tagline that appears below site title in masthead
 name                     : "Nishkarsh"
-description              : "*helloworld.*"
+description              : "helloworld.*"
 url                      : "https://nish-97.github.io"
 baseurl                  : # the subpath of your site, e.g. "/blog"
 repository               : # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
@@ -142,7 +142,7 @@ footer:
       # url:
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
-      # url:
+      url:  "https://github.com/nish-97"
     - label: "GitLab"
       icon: "fab fa-fw fa-gitlab"
       # url:
