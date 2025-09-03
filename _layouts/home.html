@@ -3,146 +3,184 @@ layout: archive
 ---
 
 {{ content }}
+
 <style>
-  ul{
-    margin-bottom: 0;
+  /* General spacing */
+  body {
+    margin: 0;
+    padding: 0;
+  }
+
+  h3 {
+    margin-top: 10px;
+    margin-bottom: 5px;
+  }
+
+  p {
+    margin: 5px 0;
+    font-size: 13pt;
+    line-height: 1.4;
+  }
+
+  hr {
+    margin: 5px 0 10px 0;
+    border: none;
+    height: 1px;
+    background: #000;
+  }
+
+  .ul-edu {
+    margin: 0;
+    padding-left: 20px;
+  }
+
+  .ul-edu li {
+    margin-bottom: 10px;
+  }
+
+  .description p {
+    margin: 2px 0;
+  }
+
+  .col-md-7 {
+    width: 1000px;
+  }
+
+  .quote {
+    display: block;
+    font-style: italic;
+    font-size: 15px;
+    text-align: right;
+    margin-top: 10px;
   }
 </style>
-<h3 style="margin-top: 0;">About Me</h3>
-<hr style="width:1000px; height: inherit; color: black; position: relative; top:-20px" >
 
-{% if paginator %}
-  {% assign posts = paginator.posts %}
-{% else %}
-  {% assign posts = site.posts %}
-{% endif %}
- <p style="font-size: 13pt;width:1000px;margin-top: 0;">
+<!-- ===== About Me ===== -->
+<h3>About Me</h3>
+<hr>
+
+<p>
   Hello, I am a 3rd year MS student in <a href="https://www.cse.iitb.ac.in/">CSE Department</a> at IIT Bombay. 
   I come from Patna and have completed my B.Tech in Information Technology from Techno India, Kolkata.
   I love learning about systems/components present at the lowest layer of abstraction of the computing stack, right from compilers to processors. 
-  My research interests include topics related to Computer Architecture and Operating Systems. My current work is focused on Transient execution attacks and their mitigations, guided by Prof. <a href="https://www.cse.iitb.ac.in/~biswa">Biswabandan Panda</a> as a part of <a href="https://casper-iitb.github.io/">CASPER</a> research group.
- </p>
+  My research interests include topics related to Computer Architecture and Operating Systems. My current work is focused on Transient execution attacks and their mitigations, guided by Prof. <a href="https://www.cse.iitb.ac.in/~biswa">Biswabandan Panda</a> as a part of the <a href="https://casper-iitb.github.io/">CASPER</a> research group.
+</p>
 
- <p style="font-size: 13pt;width:1000px">
+<p>
   Besides academics, I love following world geopolitics, cricket and chess. I also firmly believe in sustainable development of the planet
   Earth through education and awareness, so that we can curb the effects of climate change.
-  </p>
-  <i style="text-align: right; font-size:15px;">“I’m sure the moment we start behaving as if we were in an emergency, we can avoid climate and ecological catastrophe.” - Greta Thunberg</i>
+</p>
 
+<span class="quote">“I’m sure the moment we start behaving as if we were in an emergency, we can avoid climate and ecological catastrophe.” – Greta Thunberg</span>
 
-
-<h3> Educational Journey </h3>
- <hr style="width:1000px; color: black;">
-
+<!-- ===== Education ===== -->
+<h3>Educational Journey</h3>
+<hr>
 
 <div class="col-md-7">
-  <ul class="ul-edu fa-ul mb-0">
-    
+  <ul class="ul-edu fa-ul">
     <li>
       <i class="fa-li fas fa-graduation-cap"></i>
       <div class="description">
-        <strong><p class="course">MS by Research in Computer Science</p></strong>
-        <i class="fa-li fas fa-calendar-alt" style="position:relative;top:-25px"></i>
-        <p class="course" style="position: relative;top:-80px;">2023 - *</p>
-        <p class="institution"style="position: relative;top:-100px;"><a href="https://www.iitb.ac.in">Indian Institute of Technology, Bombay</a></p>
+        <p class="course"><strong>MS by Research in Computer Science</strong></p>
+        <p class="course">2023 – *</p>
+        <p class="institution"><a href="https://www.iitb.ac.in">Indian Institute of Technology, Bombay</a></p>
       </div>
     </li>
-    
+
     <li>
       <i class="fa-li fas fa-graduation-cap"></i>
       <div class="description">
-        <strong><p class="course">B.Tech in Information Technology</p></strong>
-        <i class="fa-li fas fa-calendar-alt" style="position:relative;top:-25px"></i>
-        <p class="course" style="position: relative;top:-80px;">2016 - 20</p>
-        <p class="institution"style="position: relative;top:-100px;"><a href="https://www.ticollege.ac.in/">Techno Main Salt Lake, Kolkata</a></p>
+        <p class="course"><strong>B.Tech in Information Technology</strong></p>
+        <p class="course">2016 – 2020</p>
+        <p class="institution"><a href="https://www.ticollege.ac.in/">Techno Main Salt Lake, Kolkata</a></p>
       </div>
     </li>
-    
+
     <li>
       <i class="fa-li fas fa-graduation-cap"></i>
       <div class="description">
-        <strong><p class="course">Higher Secondary School</p></strong>
-        <i class="fa-li fas fa-calendar-alt" style="position:relative;top:-25px"></i>
-        <p class="course" style="position: relative;top:-80px;">2014 - 16</p>
-        <p class="institution"style="position: relative;top:-100px;"><a href="http://davbsebpatna.org/">DAV Public School</a><!--<i class="fa-li fas fa-external-link-alt" style="position: relative;right;">--></i></p>
-        
+        <p class="course"><strong>Higher Secondary School</strong></p>
+        <p class="course">2014 – 2016</p>
+        <p class="institution"><a href="http://davbsebpatna.org/">DAV Public School</a></p>
       </div>
     </li>
-    
   </ul>
 </div>
 
-<h3> Career Trip </h3>
- <hr style="width:500px; color: black;">
+<!-- ===== Career ===== -->
+<h3>Career Trip</h3>
+<hr style="width: 500px;">
+
 <div class="col-md-7">
-  <ul class="ul-edu fa-ul mb-0">
-    
+  <ul class="ul-edu fa-ul">
     <li>
       <i class="fa-li fas fa-briefcase"></i>
       <div class="description">
-        <strong><p class="course"><a href="https://www.wipro.com/">Wipro Pvt. Ltd.</a></p></strong>
-        <!--<i class="fa-li fas fa-calendar-alt" style="position:relative;top:-25px"></i>-->
-        <p class="institution"style="position: relative;top:-30px;">Project Engineer, 2020 - 22</p>
-      </div> 
-    </li>   
+        <p class="course"><strong><a href="https://www.wipro.com/">Wipro Pvt. Ltd.</a></strong></p>
+        <p class="institution">Project Engineer, 2020 – 2022</p>
+      </div>
+    </li>
   </ul>
 </div>
-<br>
-<br>
-<h3> Credit Courses Taken at IITB</h3>
- <hr style="width:1000px; color: black;">
+
+<!-- ===== Courses ===== -->
+<h3>Credit Courses Taken at IITB</h3>
+<hr>
+
 <div class="col-md-7">
-  <ul class="ul-edu fa-ul mb-0">
-    
+  <ul class="ul-edu fa-ul">
     <li>
       <i class="fa-li fas fa-clipboard"></i>
       <div class="description">
         <p class="course">Advanced Computer Architecture</p>
-        <p class="institution"style="position: relative;top:-30px;">Autumn' 23</p>
-      </div> 
+        <p class="institution">Autumn '23</p>
+      </div>
     </li>
-    
+
     <li>
-      <i class="fa-li fas fa-clipboard"></i>  
+      <i class="fa-li fas fa-clipboard"></i>
       <div class="description">
         <p class="course">Design & Engineering of Computer Systems</p>
-        <p class="institution"style="position: relative;top:-30px;">Autumn' 23</p>
-      </div> 
-    </li>   
-    
+        <p class="institution">Autumn '23</p>
+      </div>
+    </li>
+
     <li>
       <i class="fa-li fas fa-clipboard"></i>
       <div class="description">
         <p class="course">Embedded Systems</p>
-        <p class="institution"style="position: relative;top:-30px;">Spring' 24</p>
-      </div> 
+        <p class="institution">Spring '24</p>
+      </div>
     </li>
-    
+
     <li>
       <i class="fa-li fas fa-clipboard"></i>
       <div class="description">
         <p class="course">Topics in Virtualization and Cloud Computing</p>
-        <p class="institution"style="position: relative;top:-30px;">Spring' 24</p>
-      </div> 
+        <p class="institution">Spring '24</p>
+      </div>
     </li>
 
     <li>
       <i class="fa-li fas fa-clipboard"></i>
       <div class="description">
         <p class="course">Advanced Compilers</p>
-        <p class="institution"style="position: relative;top:-30px;">Spring' 25</p>
-      </div> 
+        <p class="institution">Spring '25</p>
+      </div>
     </li>
 
     <li>
       <i class="fa-li fas fa-clipboard"></i>
       <div class="description">
         <p class="course">Privacy Enhancing Technologies</p>
-        <p class="institution"style="position: relative;top:-30px;">Spring' 25</p>
-      </div> 
+        <p class="institution">Spring '25</p>
+      </div>
     </li>
   </ul>
 </div>
+
+<!-- ===== Blog Archive ===== -->
 {% assign entries_layout = page.entries_layout | default: 'list' %}
 <div class="entries-{{ entries_layout }}">
   {% for post in posts %}
