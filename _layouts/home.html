@@ -1,116 +1,205 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Phool Roshan Jha – Research Scholar</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      max-width: 800px;
-      margin: auto;
-      padding: 20px;
-      line-height: 1.5;
-    }
-    nav ul {
-      list-style: none;
-      padding: 0;
-      display: flex;
-      gap: 20px;
-      border-bottom: 1px solid #ddd;
-      margin-bottom: 20px;
-    }
-    nav ul li {
-      display: inline;
-    }
-    nav ul li a {
-      text-decoration: none;
-      color: #333;
-      font-weight: bold;
-    }
-    nav ul li.active a {
-      color: #007acc;
-    }
-    h1 {
-      margin-top: 0;
-      font-size: 2em;
-    }
-    .section {
-      margin-bottom: 30px;
-    }
-    .date {
-      font-size: 0.9em;
-      color: #555;
-    }
-  </style>
-</head>
-<body>
+---
+layout: archive
+---
 
-  <!-- Navigation -->
-  <nav>
-    <ul>
-      <li class="active"><a href="#">About</a></li>
-      <li><a href="#">Blog</a></li>
-      <li><a href="#">Teaching Assistant</a></li>
-      <li><a href="#">CV</a></li>
+{{ content }}
+
+<style>
+  /* General Reset and Spacing */
+  body {
+    margin: 0;
+    padding: 0;
+  }
+
+  h3 {
+    margin-top: 10px;
+    margin-bottom: 5px;
+    padding-bottom: 5px;
+  }
+
+  p {
+    margin: 5px 0;
+    font-size: 13pt;
+    line-height: 1.4;
+  }
+
+  hr {
+    margin: 5px 0 15px 0;
+    border: none;
+    height: 1px;
+    background: #000;
+  }
+
+  .section {
+    margin-bottom: 30px; /* Add space after each section */
+  }
+
+  .ul-edu {
+    margin: 0;
+    padding-left: 20px;
+  }
+
+  .ul-edu li {
+    margin-bottom: 10px;
+  }
+
+  .description p {
+    margin: 2px 0;
+  }
+
+  .col-md-7 {
+    width: 1000px;
+  }
+
+  .quote {
+    display: block;
+    font-style: italic;
+    font-size: 15px;
+    text-align: right;
+    margin-top: 10px;
+  }
+</style>
+
+<!-- ===== About Me ===== -->
+<div class="section">
+  <h3>About Me</h3>
+  <hr>
+
+  <p>
+    Hello, I am a 3rd year MS student in <a href="https://www.cse.iitb.ac.in/">CSE Department</a> at IIT Bombay. 
+    I come from Patna and have completed my B.Tech in Information Technology from Techno India, Kolkata.
+    I love learning about systems/components present at the lowest layer of abstraction of the computing stack, right from compilers to processors. 
+    My research interests include topics related to Computer Architecture and Operating Systems. My current work is focused on Transient execution attacks and their mitigations, guided by Prof. <a href="https://www.cse.iitb.ac.in/~biswa">Biswabandan Panda</a> as a part of the <a href="https://casper-iitb.github.io/">CASPER</a> research group.
+  </p>
+
+  <p>
+    Besides academics, I love following world geopolitics, cricket and chess. I also firmly believe in sustainable development of the planet
+    Earth through education and awareness, so that we can curb the effects of climate change.
+  </p>
+
+  <span class="quote">“I’m sure the moment we start behaving as if we were in an emergency, we can avoid climate and ecological catastrophe.” – Greta Thunberg</span>
+</div>
+
+<!-- ===== Educational Journey ===== -->
+<div class="section">
+  <h3>Educational Journey</h3>
+  <hr>
+
+  <div class="col-md-7">
+    <ul class="ul-edu fa-ul">
+      <li>
+        <i class="fa-li fas fa-graduation-cap"></i>
+        <div class="description">
+          <p class="course"><strong>MS by Research in Computer Science</strong></p>
+          <p class="course">2023 – *</p>
+          <p class="institution"><a href="https://www.iitb.ac.in">Indian Institute of Technology, Bombay</a></p>
+        </div>
+      </li>
+
+      <li>
+        <i class="fa-li fas fa-graduation-cap"></i>
+        <div class="description">
+          <p class="course"><strong>B.Tech in Information Technology</strong></p>
+          <p class="course">2016 – 2020</p>
+          <p class="institution"><a href="https://www.ticollege.ac.in/">Techno Main Salt Lake, Kolkata</a></p>
+        </div>
+      </li>
+
+      <li>
+        <i class="fa-li fas fa-graduation-cap"></i>
+        <div class="description">
+          <p class="course"><strong>Higher Secondary School</strong></p>
+          <p class="course">2014 – 2016</p>
+          <p class="institution"><a href="http://davbsebpatna.org/">DAV Public School</a></p>
+        </div>
+      </li>
     </ul>
-  </nav>
+  </div>
+</div>
 
-  <!-- Hero / Intro Section -->
-  <section class="section">
-    <h1>Hello World!<br>I'm Phool Roshan Jha</h1>
-    <p><strong>Research Scholar, Computer Science, IIT Bombay</strong></p>
-    <p>Currently pursuing a PhD at IIT Bombay under the supervision of
-      <a href="https://www.devashishgosain.com">Prof. Devashish Gosain</a>.
-      My research focuses on Privacy and Network Security.</p>
-    <p>I completed my MTech from IIT Bhilai under the guidance of
-      <a href="https://www.iitbhilai.ac.in">Prof. Dhiman Saha</a> and
-      <a href="https://www.iitbhilai.ac.in">Prof. Santosh Biswas</a>, and my BTech from JECRC (RTU Kota).</p>
-    <p>I also worked as a Software Engineer at
-      <a href="https://www.persistent.com">Persistent Systems Ltd.</a>,
-      gaining strong development and engineering experience.</p>
-    <p>My interests include programming (C, C++, Java, Android, Python), cybersecurity, networking, operating systems, and competitive coding.</p>
-    <p>Outside of work, I enjoy badminton, gaming, and sharing knowledge on tech & non-tech topics.</p>
-    <p>Associated with the Security, Cyber Anonymity & Networks (SCAN) Lab.</p>
-  </section>
+<!-- ===== Career Trip ===== -->
+<div class="section">
+  <h3>Career Trip</h3>
+  <hr style="width: 500px;">
 
-  <!-- Research Interests -->
-  <section class="section">
-    <h2>Research Interests</h2>
-    <ul>
-      <li>Privacy and Network Security</li>
+  <div class="col-md-7">
+    <ul class="ul-edu fa-ul">
+      <li>
+        <i class="fa-li fas fa-briefcase"></i>
+        <div class="description">
+          <p class="course"><strong><a href="https://www.wipro.com/">Wipro Pvt. Ltd.</a></strong></p>
+          <p class="institution">Project Engineer, 2020 – 2022</p>
+        </div>
+      </li>
     </ul>
-  </section>
+  </div>
+</div>
 
-  <!-- News / Updates -->
-  <section class="section">
-    <h2>News</h2>
-    <p class="date">Mar 15, 2024</p>
-    <p>On‑Campus Placement – Placed at CD Integrated Pvt. Ltd. as Software Developer</p>
-    <p class="date">Dec 17, 2023</p>
-    <p>InterIIT Scitech Meet @ IIT Madras</p>
-    <p class="date">Oct 18, 2023</p>
-    <p>India Mobile Congress (IMC) – Showcased my Master’s thesis project</p>
-    <p class="date">Mar 22, 2023</p>
-    <p>CSE Research Symposium @ IIT Bombay</p>
-    <p class="date">Feb 22, 2022</p>
-    <p>Internal Hackathon @ Persistent Systems Ltd. (Runner-up, cash prize)</p>
-  </section>
+<!-- ===== Courses Taken ===== -->
+<div class="section">
+  <h3>Credit Courses Taken at IITB</h3>
+  <hr>
 
-  <!-- Latest Blog Post -->
-  <section class="section">
-    <h2>Latest Blog</h2>
-    <p class="date">May 13, 2025</p>
-    <p><a href="#">How to run Windows 10/11 Professional on Digital Ocean Cloud Virtual Machine from Scratch</a></p>
-  </section>
+  <div class="col-md-7">
+    <ul class="ul-edu fa-ul">
+      <li>
+        <i class="fa-li fas fa-clipboard"></i>
+        <div class="description">
+          <p class="course">Advanced Computer Architecture</p>
+          <p class="institution">Autumn '23</p>
+        </div>
+      </li>
 
-  <!-- Footer -->
-  <footer style="border-top: 1px solid #ddd; padding-top: 10px;">
-    <p>Feel free to reach me on any platform</p>
-    <p>&copy; 2025 | Roshan | Last updated: July 28, 2025.</p>
-  </footer>
+      <li>
+        <i class="fa-li fas fa-clipboard"></i>
+        <div class="description">
+          <p class="course">Design & Engineering of Computer Systems</p>
+          <p class="institution">Autumn '23</p>
+        </div>
+      </li>
 
-</body>
-</html>
+      <li>
+        <i class="fa-li fas fa-clipboard"></i>
+        <div class="description">
+          <p class="course">Embedded Systems</p>
+          <p class="institution">Spring '24</p>
+        </div>
+      </li>
 
+      <li>
+        <i class="fa-li fas fa-clipboard"></i>
+        <div class="description">
+          <p class="course">Topics in Virtualization and Cloud Computing</p>
+          <p class="institution">Spring '24</p>
+        </div>
+      </li>
+
+      <li>
+        <i class="fa-li fas fa-clipboard"></i>
+        <div class="description">
+          <p class="course">Advanced Compilers</p>
+          <p class="institution">Spring '25</p>
+        </div>
+      </li>
+
+      <li>
+        <i class="fa-li fas fa-clipboard"></i>
+        <div class="description">
+          <p class="course">Privacy Enhancing Technologies</p>
+          <p class="institution">Spring '25</p>
+        </div>
+      </li>
+    </ul>
+  </div>
+</div>
+
+<!-- ===== Blog Archive ===== -->
+{% assign entries_layout = page.entries_layout | default: 'list' %}
+<div class="entries-{{ entries_layout }}">
+  {% for post in posts %}
+    {% include archive-single.html type=entries_layout %}
+  {% endfor %}
+</div>
+
+{% include paginator.html %}
 
