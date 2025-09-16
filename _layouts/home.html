@@ -5,33 +5,58 @@ layout: archive
 {{ content }}
 
 <style>
-  /* General Reset and Spacing */
+  :root {
+    /* Light mode colors */
+    --bg-color: #fff;
+    --text-color: #000;
+    --header-color: #3333cc;
+    --hr-color: #000;
+    --icon-color: #3333cc;
+    --quote-color: #555555;
+    --link-color: #3333cc;
+  }
+
+  body.dark-mode {
+    --bg-color: #121212;
+    --text-color: #e0e0e0;
+    --header-color: #bb86fc;
+    --hr-color: #333;
+    --icon-color: #bb86fc;
+    --quote-color: #aaaaaa;
+    --link-color: #bb86fc;
+  }
+
   body {
     margin: 0;
     padding: 0;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    font-family: Arial, sans-serif;
   }
 
   h3 {
     margin-top: 10px;
     margin-bottom: 5px;
     padding-bottom: 5px;
+    color: var(--header-color);
   }
 
   p {
     margin: 5px 0;
     font-size: 13pt;
     line-height: 1.4;
+    color: var(--text-color);
   }
 
   hr {
     margin: 5px 0 15px 0;
     border: none;
     height: 1px;
-    background: #000;
+    background: var(--hr-color);
   }
 
   .section {
-    margin-bottom: 30px; /* Add space after each section */
+    margin-bottom: 30px;
   }
 
   .ul-edu {
@@ -41,14 +66,29 @@ layout: archive
 
   .ul-edu li {
     margin-bottom: 10px;
+    color: var(--text-color);
   }
 
   .description p {
     margin: 2px 0;
+    color: var(--text-color);
   }
 
   .col-md-7 {
     width: 1000px;
+  }
+
+  .fa-li {
+    color: var(--icon-color);
+  }
+
+  a {
+    color: var(--link-color);
+    text-decoration: none;
+  }
+
+  a:hover {
+    text-decoration: underline;
   }
 
   .quote {
@@ -57,8 +97,37 @@ layout: archive
     font-size: 15px;
     text-align: right;
     margin-top: 10px;
+    color: var(--quote-color);
+  }
+
+  /* Toggle Switch container styling */
+  #theme-toggle-container {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    z-index: 999;
+    font-weight: bold;
+    font-family: Arial, sans-serif;
+  }
+
+  #theme-toggle-container label {
+    cursor: pointer;
+    color: var(--header-color);
+  }
+
+  #theme-toggle {
+    margin-left: 8px;
+    cursor: pointer;
   }
 </style>
+
+<!-- Dark Mode Toggle Switch -->
+<div id="theme-toggle-container">
+  <label for="theme-toggle">
+    Dark Mode
+    <input type="checkbox" id="theme-toggle" />
+  </label>
+</div>
 
 <!-- ===== About Me ===== -->
 <div class="section">
@@ -67,9 +136,10 @@ layout: archive
 
   <p>
     Hello, I am a 3rd year MS student in <a href="https://www.cse.iitb.ac.in/">CSE Department</a> at IIT Bombay. 
-    I come from Patna and have completed my B.Tech in Information Technology from Techno India, Kolkata.
-    I love learning about systems/components present at the lowest layer of abstraction of the computing stack, right from compilers to processors. 
-    My research interests include topics related to Computer Architecture and Operating Systems. My current work is focused on Transient execution attacks and their mitigations, guided by Prof. <a href="https://www.cse.iitb.ac.in/~biswa">Biswabandan Panda</a> as a part of the <a href="https://casper-iitb.github.io/">CASPER</a> research group.
+    I have completed my B.Tech in Information Technology from Techno India, Kolkata.
+    I love learning about systems/components present at the lowest layer of abstraction in the computing stack, from designing optimal compiler optimisations to pushing the boundaries of processor performance. 
+    My research interests include topics related to Computer Architecture, Compilers and Operating Systems. My current work is focused on securing against Transient execution based microarchitectural attacks for end-to-end memory hierarchy;
+    guided by Prof. <a href="https://www.cse.iitb.ac.in/~biswa">Biswabandan Panda</a> as a part of the <a href="https://casper-iitb.github.io/">CASPER</a> research group.
   </p>
 
   <p>
@@ -203,3 +273,26 @@ layout: archive
 
 {% include paginator.html %}
 
+<script>
+  const toggleSwitch = document.getElementById('theme-toggle');
+  const savedTheme = localStorage.getItem('theme');
+
+  // Apply saved theme or default to dark
+  if (savedTheme === 'light') {
+    document.body.classList.remove('dark-mode');
+    toggleSwitch.checked = false;
+  } else {
+    document.body.classList.add('dark-mode');
+    toggleSwitch.checked = true;
+  }
+
+  toggleSwitch.addEventListener('change', () => {
+    if (toggleSwitch.checked) {
+      document.body.classList.add('dark-mode');
+      localStorage.setItem('theme', 'dark');
+    } else {
+      document.body.classList.remove('dark-mode');
+      localStorage.setItem('theme', 'light');
+    }
+  });
+</script>
