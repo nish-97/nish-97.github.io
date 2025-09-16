@@ -38,3 +38,34 @@
 @import "minimal-mistakes/archive";
 @import "minimal-mistakes/sidebar";
 @import "minimal-mistakes/print";
+
+/* Reduce padding and margins in the footer */
+.page__footer-follow,
+.page__footer-copyright {
+  padding: 2px 8px; /* Minimal padding */
+  margin: 0;        /* Remove margins */
+  font-size: 0.85em; /* Slightly smaller font size */
+}
+
+/* Adjust spacing between social icons */
+.page__footer-follow ul.social-icons {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.page__footer-follow ul.social-icons li {
+  margin-bottom: 2px; /* Tighten spacing */
+}
+
+.page__footer-follow ul.social-icons li a {
+  padding: 0;
+  display: inline-block;
+  line-height: 1.1; /* Tighter line height */
+}
+
+/* Adjust spacing between footer sections */
+.page__footer-follow ul.social-icons li strong {
+  display: block;
+  margin-bottom: 2px;
+}
