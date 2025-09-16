@@ -1,77 +1,37 @@
-<i style="text-align: right; font-size: 15px; display: block; margin: 0 0 5px 0; line-height: 1.2;">
-  “There is freedom waiting for you,
-  On the breezes of the sky,<br>
-  And you ask "What if I fall?"
-  Oh but my darling,
-  What if you fly?” - Erin Hanson
-</i>
+<div class="footer-content-inline">
+  <i class="footer-quote">
+    “There is freedom waiting for you,
+    On the breezes of the sky,<br>
+    And you ask "What if I fall?"
+    Oh but my darling,<br>
+    What if you fly?” - Erin Hanson
+  </i>
 
-<style>
-  .page__footer-follow {
-    padding: 2px 8px;      /* minimal padding */
-    margin-bottom: 2px;    /* minimal margin */
-  }
+  <div class="page__footer-follow inline-follow">
+    <ul class="social-icons">
+      {% if site.data.ui-text[site.locale].follow_label %}
+        <li><strong>{{ site.data.ui-text[site.locale].follow_label }}</strong></li>
+      {% endif %}
 
-  .page__footer-follow ul.social-icons {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-  }
-
-  .page__footer-follow ul.social-icons li {
-    margin-bottom: 2px;    /* very tight spacing */
-  }
-
-  .page__footer-follow ul.social-icons li strong {
-    display: block;
-    margin-bottom: 2px;
-  }
-
-  .page__footer-follow ul.social-icons li a {
-    padding: 0;            /* no extra padding */
-    display: inline-block;
-    line-height: 1.1;      /* tighter line height */
-  }
-
-  .page__footer-copyright {
-    padding: 2px 8px;      /* minimal padding */
-    font-size: 0.8em;
-    margin-top: 2px;
-    text-align: center;
-    line-height: 1.2;
-  }
-</style>
-
-<div class="page__footer-follow">
-  <ul class="social-icons">
-    {% if site.data.ui-text[site.locale].follow_label %}
-      <li><strong>{{ site.data.ui-text[site.locale].follow_label }}</strong></li>
-    {% endif %}
-
-    {% if site.footer.links %}
-      {% for link in site.footer.links %}
-        {% if link.label and link.url %}
-          <li>
-            <a href="{{ link.url }}" rel="nofollow noopener noreferrer">
-              <i class="{{ link.icon | default: 'fas fa-link' }}" aria-hidden="true"></i> {{ link.label }}
-            </a>
-          </li>
-        {% endif %}
-      {% endfor %}
-    {% endif %}
-    {% unless site.atom_feed.hide %}
-      <li>
-        <a href="{% if site.atom_feed.path %}{{ site.atom_feed.path }}{% else %}{{ '/feed.xml' | relative_url }}{% endif %}">
-          <i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> {{ site.data.ui-text[site.locale].feed_label | default: "Feed" }}
-        </a>
-      </li>
-    {% endunless %}
-  </ul>
+      {% if site.footer.links %}
+        {% for link in site.footer.links %}
+          {% if link.label and link.url %}
+            <li>
+              <a href="{{ link.url }}" rel="nofollow noopener noreferrer">
+                <i class="{{ link.icon | default: 'fas fa-link' }}" aria-hidden="true"></i> {{ link.label }}
+              </a>
+            </li>
+          {% endif %}
+        {% endfor %}
+      {% endif %}
+      {% unless site.atom_feed.hide %}
+        <li>
+          <a href="{% if site.atom_feed.path %}{{ site.atom_feed.path }}{% else %}{{ '/feed.xml' | relative_url }}{% endif %}">
+            <i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> {{ site.data.ui-text[site.locale].feed_label | default: "Feed" }}
+          </a>
+        </li>
+      {% endunless %}
+    </ul>
+  </div>
 </div>
 
-<div class="page__footer-copyright">
-  &copy; {{ site.time | date: '%Y' }} {{ site.name | default: site.title }}. 
-  {{ site.data.ui-text[site.locale].powered_by | default: "Powered by" }} 
-  <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; 
-  <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.
-</div>

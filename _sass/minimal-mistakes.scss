@@ -39,33 +39,77 @@
 @import "minimal-mistakes/sidebar";
 @import "minimal-mistakes/print";
 
-/* Reduce padding and margins in the footer */
-.page__footer-follow,
-.page__footer-copyright {
-  padding: 2px 8px; /* Minimal padding */
-  margin: 0;        /* Remove margins */
-  font-size: 0.85em; /* Slightly smaller font size */
+// /* Reduce padding and margins in the footer */
+// .page__footer-follow,
+// .page__footer-copyright {
+//   padding: 2px 8px; /* Minimal padding */
+//   margin: 0;        /* Remove margins */
+//   font-size: 0.85em; /* Slightly smaller font size */
+// }
+
+// /* Adjust spacing between social icons */
+// .page__footer-follow ul.social-icons {
+//   margin: 0;
+//   padding: 0;
+//   list-style: none;
+// }
+
+// .page__footer-follow ul.social-icons li {
+//   margin-bottom: 2px; /* Tighten spacing */
+// }
+
+// .page__footer-follow ul.social-icons li a {
+//   padding: 0;
+//   display: inline-block;
+//   line-height: 1.1; /* Tighter line height */
+// }
+
+// /* Adjust spacing between footer sections */
+// .page__footer-follow ul.social-icons li strong {
+//   display: block;
+//   margin-bottom: 2px;
+// }
+
+.footer-content-inline {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap; /* Wraps content on smaller screens */
+  padding: 5px 10px;
+  margin: 0;
 }
 
-/* Adjust spacing between social icons */
-.page__footer-follow ul.social-icons {
+.footer-quote {
+  font-size: 15px;
   margin: 0;
   padding: 0;
-  list-style: none;
+  line-height: 1.2;
+  flex: 1 1 auto;
 }
 
-.page__footer-follow ul.social-icons li {
-  margin-bottom: 2px; /* Tighten spacing */
-}
-
-.page__footer-follow ul.social-icons li a {
+.inline-follow {
+  margin: 0;
   padding: 0;
-  display: inline-block;
-  line-height: 1.1; /* Tighter line height */
 }
 
-/* Adjust spacing between footer sections */
-.page__footer-follow ul.social-icons li strong {
-  display: block;
-  margin-bottom: 2px;
+.page__footer-follow.inline-follow ul.social-icons {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+}
+
+.page__footer-follow.inline-follow ul.social-icons li {
+  margin-left: 10px;
+  margin-bottom: 0;
+}
+
+.page__footer-follow.inline-follow ul.social-icons li strong {
+  margin-right: 5px;
+}
+
+.page__footer-follow.inline-follow ul.social-icons li a {
+  padding: 0;
+  line-height: 1.2;
 }
