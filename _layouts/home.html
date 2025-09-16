@@ -5,58 +5,33 @@ layout: archive
 {{ content }}
 
 <style>
-  :root {
-    /* Light mode colors */
-    --bg-color: #fff;
-    --text-color: #000;
-    --header-color: #3333cc;
-    --hr-color: #000;
-    --icon-color: #3333cc;
-    --quote-color: #555555;
-    --link-color: #3333cc;
-  }
-
-  body.dark-mode {
-    --bg-color: #121212;
-    --text-color: #e0e0e0;
-    --header-color: #bb86fc;
-    --hr-color: #333;
-    --icon-color: #bb86fc;
-    --quote-color: #aaaaaa;
-    --link-color: #bb86fc;
-  }
-
+  /* General Reset and Spacing */
   body {
     margin: 0;
     padding: 0;
-    background-color: var(--bg-color);
-    color: var(--text-color);
-    font-family: Arial, sans-serif;
   }
 
   h3 {
     margin-top: 10px;
     margin-bottom: 5px;
     padding-bottom: 5px;
-    color: var(--header-color);
   }
 
   p {
     margin: 5px 0;
     font-size: 13pt;
     line-height: 1.4;
-    color: var(--text-color);
   }
 
   hr {
     margin: 5px 0 15px 0;
     border: none;
     height: 1px;
-    background: var(--hr-color);
+    background: #000;
   }
 
   .section {
-    margin-bottom: 30px;
+    margin-bottom: 30px; /* Add space after each section */
   }
 
   .ul-edu {
@@ -66,29 +41,14 @@ layout: archive
 
   .ul-edu li {
     margin-bottom: 10px;
-    color: var(--text-color);
   }
 
   .description p {
     margin: 2px 0;
-    color: var(--text-color);
   }
 
   .col-md-7 {
     width: 1000px;
-  }
-
-  .fa-li {
-    color: var(--icon-color);
-  }
-
-  a {
-    color: var(--link-color);
-    text-decoration: none;
-  }
-
-  a:hover {
-    text-decoration: underline;
   }
 
   .quote {
@@ -97,37 +57,8 @@ layout: archive
     font-size: 15px;
     text-align: right;
     margin-top: 10px;
-    color: var(--quote-color);
-  }
-
-  /* Toggle Switch container styling */
-  #theme-toggle-container {
-    position: fixed;
-    top: 10px;
-    right: 10px;
-    z-index: 999;
-    font-weight: bold;
-    font-family: Arial, sans-serif;
-  }
-
-  #theme-toggle-container label {
-    cursor: pointer;
-    color: var(--header-color);
-  }
-
-  #theme-toggle {
-    margin-left: 8px;
-    cursor: pointer;
   }
 </style>
-
-<!-- Dark Mode Toggle Switch -->
-<div id="theme-toggle-container">
-  <label for="theme-toggle">
-    Dark Mode
-    <input type="checkbox" id="theme-toggle" />
-  </label>
-</div>
 
 <!-- ===== About Me ===== -->
 <div class="section">
@@ -273,26 +204,3 @@ layout: archive
 
 {% include paginator.html %}
 
-<script>
-  const toggleSwitch = document.getElementById('theme-toggle');
-  const savedTheme = localStorage.getItem('theme');
-
-  // Apply saved theme or default to dark
-  if (savedTheme === 'light') {
-    document.body.classList.remove('dark-mode');
-    toggleSwitch.checked = false;
-  } else {
-    document.body.classList.add('dark-mode');
-    toggleSwitch.checked = true;
-  }
-
-  toggleSwitch.addEventListener('change', () => {
-    if (toggleSwitch.checked) {
-      document.body.classList.add('dark-mode');
-      localStorage.setItem('theme', 'dark');
-    } else {
-      document.body.classList.remove('dark-mode');
-      localStorage.setItem('theme', 'light');
-    }
-  });
-</script>
